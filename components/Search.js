@@ -1,9 +1,9 @@
 Search = React.createClass({
     getInitialState() {
         return {
-            loading: false,
+
             searchingText: '',
-            gif: {}
+
           };
         },
 

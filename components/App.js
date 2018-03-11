@@ -1,4 +1,14 @@
+var GIPHY_API_URL = 'http://api.giphy.com';
+var GIPHY_PUB_KEY = 'dc6zaTOxFJmzC';
+
 App = React.createClass({
+    getInitialState() {
+    return {
+        loading: false,
+        searchingText: '',
+        gif: {}
+    };
+},
 
     getGif: function(searchingText, callback) {  // 1.
         var url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText;  // 2.
